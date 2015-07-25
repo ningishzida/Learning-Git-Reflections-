@@ -1,0 +1,42 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf210
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;\red38\green38\blue38;\red242\green242\blue242;\red36\green36\blue36;
+\red255\green255\blue255;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl440
+
+\f0\fs26 \cf2 \cb3 cd ~                          # change directories to your home directory\
+mkdir version-control         # make version-control directory\
+cd version-control            # go to version-control directory\
+mkdir reflections             # create reflections directory\
+cd reflections                # go to reflections directory\
+subl lesson_1_reflections.txt # launch sublime with file called lesson_1_reflections.txt (you can replace subl with another editor here if you prefer a different one)\
+pwd # print working directory - shows what directory you are in\
+ls  # list the files in this directory\
+\pard\pardeftab720\sl460
+
+\f1\b\fs28 \cf4 \cb5 How could having easy access to the entire history of a file make you a more efficient programmer in the long term?\
+
+\b0 You can go back to previous commits, compare and catch bugs.  You might also want to use earlier iterations of programs for different purposes.\
+
+\b What do you think are the pros and cons of manually choosing when to create a commit, like you do in Git, vs having versions automatically saved, like Google docs does?\
+
+\b0 Manually choosing will let you pick when you have completed meaningful amounts of code or when you\'92ve completed a certain sub-task.  But you might forget to save.  Auto saves may create too many saves to navigate meaningfully.\
+
+\b Why do you think some version control systems, like Git, allow saving multiple files in one commit, while others, like Google Docs, treat each file separately?\
+
+\b0 Saving multiple files is useful when objects are referenced amongst the files.  So making a functional change in one file may require a change in another file.  When accessing a previous commit it is useful to have these multi-file saves.\
+
+\b How can you use the commands git log and git diff to view the history of files?\
+
+\b0 Git log shows a list of all commits for a repository, with comments and time saved.  Git diff will show the lines added and deleted between any 2 commits within a repository.\
+
+\b How might using version control make you more confident to make changes that could break something?\
+
+\b0 Version control allows you to make changes while having a previous saves of that project in case something goes wrong so you can compare and possibly find the arrow by seeing what was changed between the 2 files.\
+
+\b Now that you have your workspace set up, what do you want to try using Git for?\
+
+\b0 Debugging code.\
+}
