@@ -1,0 +1,50 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf210
+{\fonttbl\f0\fnil\fcharset0 AndaleMono;}
+{\colortbl;\red255\green255\blue255;\red47\green255\blue18;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f0\fs24 \cf2 \cb0 \CocoaLigature0 Matei-Gurans-MacBook-Pro:~ mateiguran$ cd Desktop/\
+Matei-Gurans-MacBook-Pro:Desktop mateiguran$ diff -u game_old.js game_new.js\
+--- game_old.js	2015-07-24 01:23:58.000000000 -0500\
++++ game_new.js	2015-07-24 01:24:14.000000000 -0500\
+@@ -4,9 +4,9 @@\
+ //\
+ \
+ KEY_CODES = \{\
++  13: 'enter',\
+   32: 'space',\
+   37: 'left',\
+-  38: 'up',\
+   39: 'right',\
+   40: 'down',\
+   70: 'f',\
+@@ -392,7 +392,7 @@\
+       this.vel.rot = 0;\
+     \}\
+ \
+-    if (KEY_STATUS.up) \{\
++    if (KEY_STATUS.spacr) \{\
+       var rad = ((this.rot-90) * Math.PI)/180;\
+       this.acc.x = 0.5 * Math.cos(rad);\
+       this.acc.y = 0.5 * Math.sin(rad);\
+@@ -406,7 +406,7 @@\
+     if (this.delayBeforeBullet > 0) \{\
+       this.delayBeforeBullet -= delta;\
+     \}\
+-    if (KEY_STATUS.space) \{\
++    if (KEY_STATUS.enter) \{\
+       if (this.delayBeforeBullet <= 0) \{\
+         this.delayBeforeBullet = 10;\
+         for (var i = 0; i < this.bullets.length; i++) \{\
+@@ -919,7 +919,7 @@\
+     waiting: function () \{\
+       Text.renderText(ipad ? 'Touch Sreen to Start' : 'Press Space to Start', 36, Game.canvasWidth/2 - 270, Game.canvasHeight/2);\
+       if (KEY_STATUS.space || window.gameStart) \{\
+-        KEY_STATUS.space = false; // hack so we don't shoot right away\
++        KEY_STATUS.space = false; // hack so we don't move right away\
+         window.gameStart = false;\
+         this.state = 'start';\
+       \}\
+\
+}
